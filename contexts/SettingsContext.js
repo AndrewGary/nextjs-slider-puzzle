@@ -6,6 +6,8 @@ const SettingsContext = ({ children }) => {
     const [settings, setSettings] = useState({
         difficulty: ['Easy', 'Medium', 'Hard'],
         user: 'Andrew',
+        colsAndRows: 5,
+        boardArray: []
     });
 
     return (

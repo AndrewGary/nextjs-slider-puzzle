@@ -6,8 +6,6 @@ import SettingsContext from '../contexts/SettingsContext'
 
 export default function Home() {
   return (
-    <SettingsContext>
       <Settings />
-    </SettingsContext>
   )
 }

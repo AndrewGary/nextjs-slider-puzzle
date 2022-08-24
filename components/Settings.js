@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../contexts/SettingsContext";
+import Link from "next/link";
 
 const Settings = () => {
   const [settings, setSettings] = useContext(Context);
@@ -13,6 +14,17 @@ const Settings = () => {
         setDifficultyLevel(0);
     }else{
         setDifficultyLevel(difficultyLevel + 1);
+    }
+    if(settings.colsAndRows === 6){
+      setSettings({
+        ...settings,
+        colsAndRows: 4
+      })
+    }else{
+      setSettings({
+        ...settings,
+        colsAndRows: settings.colsAndRows + 1
+      })
     }
   };
 
@@ -28,7 +40,9 @@ const Settings = () => {
             <button className="border border-orange-600 bg-orange-400 w-2/3 h-4/6 rounded-md">Change Image</button>
           </div>
         </div>
-        <div className="border border-black">Start Game</div>
+        <Link href='/GameBoard'>
+          <a className="border border-black">Start Game</a>
+        </Link>
       </div>
     </div>
   );
