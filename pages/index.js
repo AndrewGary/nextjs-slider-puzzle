@@ -2,12 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Settings from '../components/Settings'
-import DifficultyContext from '../contexts/DifficultyContext'
+import SettingsContext from '../contexts/SettingsContext'
 
 export default function Home() {
   return (
-    <DifficultyContext>
+    <SettingsContext>
       <Settings />
-    </DifficultyContext>
+    </SettingsContext>
   )
 }
